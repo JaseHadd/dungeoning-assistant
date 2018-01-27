@@ -15,10 +15,7 @@ export default {
         { position: { x: 2, y: 8 } },
         { position: { x: 3, y: 9 } }
       ]
-    };
-  },
-  created: function() {
-    console.log(this.$el);
+    }
   },
   components: {
     token

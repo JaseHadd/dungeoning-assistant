@@ -1,8 +1,8 @@
-import Vue from "vue";
-import Vuex from "vuex";
+import Vue from 'vue'
+import Vuex from 'vuex'
 import createPersistedState from 'vuex-persistedstate'
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {},
@@ -23,6 +23,6 @@ const store = new Vuex.Store({
       key: 'dungeoneering'
     })
   ]
-});
+})
 
-export default store;
+export default store
