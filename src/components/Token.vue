@@ -1,17 +1,19 @@
 <template lang="html">
-  <div class="token" :style="{top: top + 'px', left: left + 'px'}" draggable @dragend="finishDrag"></div>
+  <div class="token" :style="{top: token.position.y * 18 + 'px', left: token.position.x * 18 + 'px'}" draggable @dragstart="beginDrag" @dragend="finishDrag"></div>
 </template>
 
 <script>
 export default {
   props: {
-    top: Number,
-    left: Number
+    token: Object
   },
   methods: {
+    beginDrag: function(event) {
+      event.dataTransfer.setData('id', this.token.key);
+    },
     finishDrag: function (event) {
       let mapContainer = this.$parent.$el
-      let token = event.target
+      let token = this.$el
 
       let x = Math.floor((event.pageX - mapContainer.offsetLeft) / 18) * 18
       let y = Math.floor((event.pageY - mapContainer.offsetTop) / 18) * 18
