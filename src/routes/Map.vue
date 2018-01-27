@@ -1,6 +1,6 @@
 <template>
   <div id="map" ref="map">
-    <token v-for="token in tokens" :top="token.position.y * 18" :left="token.position.x * 18" />
+    <token v-for="token in tokens" :key="token.key" :top="token.position.y * 18" :left="token.position.x * 18" />
   </div>
 </template>
 
@@ -12,8 +12,8 @@ export default {
   data: () => {
     return {
       tokens: [
-        { position: { x: 2, y: 8 } },
-        { position: { x: 3, y: 9 } }
+        { key = 1, position: { x: 2, y: 8 } },
+        { key = 2, position: { x: 3, y: 9 } }
       ]
     }
   },
