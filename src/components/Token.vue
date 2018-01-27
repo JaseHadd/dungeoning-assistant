@@ -13,10 +13,10 @@ export default {
 
 <style lang="scss" scoped>
 .token {
-  height: 10px;
-  width: 10px;
+  height: 18px;
+  width: 18px;
   position: absolute;
-  border-radius: 9;
+  border-radius: 9px;
   background-color: #00b;
 }
 </style>

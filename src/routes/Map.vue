@@ -35,9 +35,9 @@ export default {
 
 <style>
 #map {
-  height: 415;
-  width: 415;
+  height: 415px;
+  width: 415px;
   position: relative;
-  background-image: url(5a6bccb3-dcf08151.jpg);
+  background-image: url(/dist/images/5a6bccb3-dcf08151.jpg);
 }
 </style>
