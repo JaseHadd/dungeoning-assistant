@@ -1,7 +1,7 @@
 {
-  "name": "testiclez",
+  "name": "dungeoning-assistant",
   "version": "0.1.0",
-  "description": "A Vue.js project",
+  "description": "",
   "author": "Jason Frost <jasonf@hotmail.com.au>",
   "private": true,
   "scripts": {

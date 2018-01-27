@@ -7,16 +7,23 @@ import VueRouter from 'vue-router';
 import store from './vuex/store.js';
 
 import Home from './routes/Home.vue';
+import Map from './routes/Map.vue';
 
 // Use declarations
 Vue.use(VueRouter);
 
 const route_home = {render: h => h(Home)}
+const route_map = {render: m => m(Map)}
 const routes = [
   {
     path: '/',
     name: 'route_home',
     component: route_home
+  },
+  {
+    path: '/map',
+    name: 'route_map',
+    component: route_map
   }
 ]
 
