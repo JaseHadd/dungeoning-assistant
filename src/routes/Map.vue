@@ -1,6 +1,6 @@
 <template>
-  <div id="map">
-    <token v-for="token in tokens" @onDragEnd="finishDrag" :top="token.position.y * 18" :left="token.position.x * 18"/>
+  <div id="map" ref="map">
+    <token v-for="token in tokens" :top="token.position.y * 18" :left="token.position.x * 18" />
   </div>
 </template>
 
@@ -9,16 +9,6 @@ import token from '../components/Token.vue'
 
 export default {
   name: 'Map',
-  methods: {
-    finishDrag: event => {
-      // `this` inside methods points to the Vue instance
-      alert('Hello ' + this.name + '!')
-      // `event` is the native DOM event
-      if (event) {
-        alert(event.target.tagName)
-      }
-    }
-  },
   data: () => {
     return {
       tokens: [
@@ -26,6 +16,9 @@ export default {
         { position: { x: 3, y: 9 } }
       ]
     };
+  },
+  created: function() {
+    console.log(this.$el);
   },
   components: {
     token
