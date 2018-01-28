@@ -8,18 +8,17 @@ export default {
     token: Object
   },
   methods: {
-    beginDrag: function(event) {
-      event.dataTransfer.setData('id', this.token.key);
+    beginDrag: function (event) {
+      event.dataTransfer.setData('id', this.token.key)
     },
     finishDrag: function (event) {
       let mapContainer = this.$parent.$el
       let token = this.$el
 
-      let x = Math.floor((event.pageX - mapContainer.offsetLeft) / 18) * 18
-      let y = Math.floor((event.pageY - mapContainer.offsetTop) / 18) * 18
+      this.token.position.x = Math.floor((event.pageX - mapContainer.offsetLeft) / 18)
+      this.token.position.y = Math.floor((event.pageY - mapContainer.offsetTop) / 18)
 
-      token.style.top = `${y}px`
-      token.style.left = `${x}px`
+      console.log(event.screenX, event.pageX, event.clientX, event.offsetX)
     }
   }
 }

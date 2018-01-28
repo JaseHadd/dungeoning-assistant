@@ -1,5 +1,5 @@
 <template>
-  <div id="map" ref="map">
+  <div id="map" ref="map" @dragover.prevent="dragOver" @drop.prevent="drop">
     <token v-for="token in tokens" :key="token.key" :token="token" />
   </div>
 </template>
